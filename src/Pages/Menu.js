@@ -5,7 +5,7 @@ import { QuestionCircleOutlined, MailOutlined, PhoneOutlined, PlusCircleFilled }
 import Meta from 'antd/es/card/Meta';
 import { Link } from 'react-router-dom';
 import { FaHistory, FaUser, FaUserAlt, FaUserPlus, FaUsers} from 'react-icons/fa';
-import { MdEditDocument } from 'react-icons/md';
+import { MdBookmarkAdded, MdEditDocument, MdMenuBook } from 'react-icons/md';
 
 const Menu = (props) => {
 
@@ -15,6 +15,18 @@ const Menu = (props) => {
   }, [])
 
   const links = [
+    {
+      title: 'Gestão de Menu',
+      icon: <MdMenuBook style={{ fontSize: '60px', color: '#047D4B' }} />,
+      link: '/menu',
+      group: 'All'
+    },
+    {
+      title: 'Gestão de Marcações',
+      icon: <MdBookmarkAdded style={{ fontSize: '60px', color: '#047D4B' }} />,
+      link: '/marcacoes',
+      group: 'All'
+    },
     {
       title: 'Meu Perfil',
       icon: <FaUserAlt style={{ fontSize: '60px', color: '#047D4B' }} />,

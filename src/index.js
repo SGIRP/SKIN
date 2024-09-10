@@ -11,6 +11,8 @@ import Menu from './Pages/Menu';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import MeuPerfil from './Pages/User/meu-perfil';
 import EditPerfil from './Pages/User/editar-meu-perfil';
+import GestaoMenu from './Pages/Menu/menu';
+import Marcacao from './Pages/Marcacao/marcacao';
 
 const queryClient = new QueryClient();
 
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Menu />
+      },
+      {
+        path: '/menu',
+        element: <GestaoMenu />
+      },
+      {
+        path:'/marcacoes',
+        element: <Marcacao />
       },
       {
         path: '/meu-perfil',
