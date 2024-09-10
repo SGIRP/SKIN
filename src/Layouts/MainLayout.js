@@ -29,8 +29,8 @@ const MainLayout = () => {
     /*if (sessionStorage.getItem('token') == null) {
       navigate('/account/login');
     } else {
-      setVisible(true);
-    }*/
+      
+    }*/setVisible(true);
   }, [location.pathname]);
 
   const goLogout = () => {
@@ -77,7 +77,7 @@ const MainLayout = () => {
                 <Divider type="vertical" style={{ height: '85px', borderWidth: '1.5px', borderColor: '#047D4B' }} className="" />
                 <div className="flex flex-col justify-center gap-1">
                   <img src={require('../assets/logo/logoSGAL.png')} className="w-16 md:w-24" style={{ marginTop: 5 }} />
-                  <div className="text-sm md:text-lg font-semibold text-gray-500">SISTEMA DE GESTÃO INTEGRADA DA RECEITA PRÓPRIA</div>
+                  <div className="text-sm md:text-lg font-semibold text-gray-500">SISTEMA DE GESTÃO ALIMENTAR DA UEM</div>
                 </div>
               </div>
 
