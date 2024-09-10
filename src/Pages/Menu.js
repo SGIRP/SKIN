@@ -16,12 +16,6 @@ const Menu = (props) => {
 
   const links = [
     {
-      title: 'Nova Planificação',
-      icon: <MdEditDocument style={{ fontSize: '60px', color: '#047D4B' }} />,
-      link: '/nova-planificacao',
-      group: 'All'
-    },
-    {
       title: 'Meu Perfil',
       icon: <FaUserAlt style={{ fontSize: '60px', color: '#047D4B' }} />,
       link: '/meu-perfil',
