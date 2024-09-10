@@ -1,18 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 import {QueryClient, QueryClientProvider} from 'react-query';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Login from './Pages/Account/signin';
 import MainLayout from './Layouts/MainLayout';
 import Recover from './Pages/Account/recoverpassword';
 import Menu from './Pages/Menu';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import CreateUser from './Pages/User/create';
+import ListUser from './Pages/User/list';
+import EditUser from './Pages/User/edit';
+import LogData from './Pages/History';
 import MeuPerfil from './Pages/User/meu-perfil';
 import EditPerfil from './Pages/User/editar-meu-perfil';
-
-const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
   {
@@ -25,11 +26,27 @@ const router = createBrowserRouter([
   },
   {
     path: '/',
-    element: <MainLayout />,
-    children: [
+    element: <MainLayout/>,
+    children:[
       {
         path: '/',
-        element: <Menu />
+        element: <Menu/>
+      },
+      {
+        path: '/usuarios/novo',
+        element: <CreateUser/>
+      },
+      {
+        path: '/usuarios',
+        element: <ListUser/>
+      },
+      {
+        path: '/usuarios/editar/:id',
+        element: <EditUser/>
+      },
+      {
+        path: '/historico',
+        element: <LogData/>
       },
       {
         path: '/meu-perfil',
@@ -39,15 +56,19 @@ const router = createBrowserRouter([
         path: '/editar-perfil',
         element: <EditPerfil/>
       }
+
     ]
-  }
+  },
 ]);
 
+const queryClient = new QueryClient();
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </QueryClientProvider>
   </React.StrictMode>
 );
