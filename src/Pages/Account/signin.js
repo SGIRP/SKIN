@@ -69,7 +69,7 @@ const Login = () => {
             <div className='flex flex-row justify-center items-center gap-2 mb-2 pt-6 pb-2'>
               <img src={require('../../assets/logo/logo-v2.png')} alt="logo" className="w-40 sm:w-16" />
               <Divider type="vertical" style={{ height: '100px', borderWidth: '1.5px', borderColor: 'green' }} />
-              <img src={require('../../assets/logo/logoGirp.jpg')} alt="logo" className="w-40 sm:w-34" />
+              <img src={require('../../assets/logo/logoSGAL.png')} alt="logo" className="w-40 sm:w-34" />
             </div>
             <p className="text-center text-lg sm:text-lg font-bold mb-1" style={{ color: 'black' }}>SISTEMA DE GESTÃO INTEGRADA DA RECEITA PRÓPRIA</p>
             <p className="text-center text-sm sm:text-sm " style={{ color: 'black' }}>INTRODUZA AS CREDENCIAIS DE ACESSO</p>
